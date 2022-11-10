@@ -1,0 +1,155 @@
+<div class="container">
+  <div class="closingTime__error" *ngIf="closeOrder">
+    <div class="info">
+      <span class="material-icons"> info </span>
+      <p>Orders are closed. Open orders</p>
+    </div>
+  </div>
+  <div class="menu-icon" style="width: max-content">
+    <div
+      class="menu-icon-bars"
+      [ngClass]="{
+        change: toggleSidebar
+      }"
+      (click)="onShowSideBar()"
+    >
+      <span class="bar1"></span>
+      <span class="bar2"></span>
+      <span class="bar3"></span>
+    </div>
+  </div>
+  <div
+    class="sidebar"
+    [ngClass]="{
+      'sidebar-active': toggleSidebar
+    }"
+  >
+    <div class="sidebar__avatar">
+      <app-avatar></app-avatar>
+      <div class="avatar__info">
+        <p class="text">Hello</p>
+        <p class="role">Admin</p>
+      </div>
+    </div>
+    <div class="sidebar__menu">
+      <p class="sidebar__menu__heading">Menu</p>
+      <ul class="sidebar__menu__list">
+        <li
+          class="sidebar__menu__list__item"
+          (click)="onToggleSidebar('orders')"
+          [ngClass]="{ active: currentPage === 'orders' }"
+        >
+          <a class="sidebar__menu__list__link">Orders</a>
+        </li>
+        <li
+          class="sidebar__menu__list__item"
+          (click)="onToggleSidebar('delivered')"
+          [ngClass]="{ active: currentPage === 'delivered' }"
+        >
+          <a class="sidebar__menu__list__link">Delivered</a>
+        </li>
+        <li
+          class="sidebar__menu__list__item"
+          *ngIf="showFailed"
+          (click)="onToggleSidebar('failed')"
+          [ngClass]="{ active: currentPage === 'failed' }"
+        >
+          <a class="sidebar__menu__list__link">Failed</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar__controls">
+      <div class="open-orders" (click)="onOpenOrders()" *ngIf="closeOrder">
+        <span class="material-icons"> lock_open </span>
+        <p>open orders</p>
+      </div>
+      <div class="close-orders" (click)="onCloseOrders()" *ngIf="!closeOrder">
+        <span class="material-icons"> lock_clock </span>
+        <p>close orders</p>
+      </div>
+      <div class="sidebar__logout" (click)="logOut()">
+        <div class="logout">
+          <span class="material-icons"> logout </span>
+          <p>Logout</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="display-page">
+    <main class="display__container" *ngIf="currentPage === 'orders'">
+      <input
+        class="date-input"
+        type="text"
+        ngxDaterangepickerMd
+        [(ngModel)]="selected"
+        placeholder="Choose date"
+        (change)="onDateChanged($event)"
+      />
+      <div class="order-details">
+        <div class="card">
+          <div class="card-info">
+            <span class="card__heading">Total Orders(This month)</span>
+            <span class="card__quantity">{{ totalOrders }}</span>
+          </div>
+          <div class="card-icon">
+            <span class="material-icons"> receipt_long </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-info">
+            <span class="card__heading">Total Amount </span>
+            <span class="card__quantity">₵{{ totalAmount }}</span>
+          </div>
+          <div class="card-icon">
+            <span class="material-icons"> payments </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-info">
+            <span class="card__heading">Amount To Be Paid</span>
+            <span class="card__quantity">₵{{ amountTobePayed }}</span>
+          </div>
+          <div class="card-icon">
+            <span class="material-icons"> payments </span>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Orders</h1>
+      <div class="display__container__items">
+        <app-single-order
+          *ngFor="let item of foodOrdered"
+          [item]="item"
+          [orderType]="OrderType.pendingOrder"
+          [isAdmin]="showOrderDetails"
+        ></app-single-order>
+      </div>
+    </main>
+
+    <!--FAILED ORDERS-->
+    <main class="display__container" *ngIf="currentPage === 'failed'">
+      <!-- <button (click)="onDeleteAllFailedOrders()">DELETE ALL FAILED ORDERS</button> -->
+      <h1 class="title">Failed and Proccessing Orders</h1>
+      <div class="display__container__items">
+        <app-single-order
+          *ngFor="let item of failedOrders"
+          [item]="item"
+          [orderType]="OrderType.failed"
+          [isAdmin]="showOrderDetails"
+        ></app-single-order>
+      </div>
+    </main>
+
+    <!--completed orders-->
+    <main class="display__container" *ngIf="currentPage === 'delivered'">
+      <h1 class="title">Delivered Orders</h1>
+      <div class="display__container__items">
+        <app-single-order
+          *ngFor="let item of deliveredOrders"
+          [item]="item"
+          [orderType]="OrderType.completed"
+          [isAdmin]="showOrderDetails"
+        ></app-single-order>
+      </div>
+    </main>
+  </div>
+</div>
