@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../models/interface';
 import { Observable, Subject } from 'rxjs';
+import { isNgTemplate } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root',
@@ -965,5 +966,14 @@ export class SocketService {
 
   getClosingTime(): { closingTime: string; openingTime: string } {
     return { closingTime: this.closingTime, openingTime: this.openingTime };
+  }
+
+  onSearchFood(searchTerm: string, category: string) {
+    if (!searchTerm) {
+      return this.getFoodByCategory(category);
+    }
+    return this.getFoodByCategory(category).filter((it) => {
+      return it.body.toLocaleLowerCase().includes(searchTerm);
+    });
   }
 }

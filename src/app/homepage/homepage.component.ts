@@ -16,6 +16,7 @@ export class HomepageComponent implements OnInit {
   category = 'all foods';
   filters = ['all foods', 'beans', 'rice', 'banku', 'fufu'];
   isShow = false;
+  searchTerm = '';
 
   constructor(
     private router: Router,
@@ -90,6 +91,14 @@ export class HomepageComponent implements OnInit {
 
   onSelectFilter(item: string) {
     this.category = item;
+    this.searchTerm = '';
     this.foodArray = this.socketService.getFoodByCategory(item);
+  }
+
+  onSearchFood(searchTerm: any) {
+    this.foodArray = this.socketService.onSearchFood(
+      searchTerm.toLocaleLowerCase(),
+      this.category
+    );
   }
 }

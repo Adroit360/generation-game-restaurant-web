@@ -33,6 +33,17 @@
     </div>
   </div>
   <div class="body__menu" id="menu">
+    <div class="search-container">
+      <div class="foresight-search-bar fill-space m-bottom">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (input)="onSearchFood(searchTerm)"
+          placeholder="Search for food..."
+        />
+        <i class="material-symbols-outlined"> search </i>
+      </div>
+    </div>
     <div>
       <h1 style="margin: 0" class="menu__heading">Our Menu</h1>
       <div class="categories">
@@ -45,7 +56,7 @@
         </p>
       </div>
     </div>
-    <div class="menu__container">
+    <div class="menu__container" *ngIf="foodArray.length > 0; else noFood">
       <div class="menu__meal__card" *ngFor="let item of foodArray">
         <div class="card__image">
           <img src="{{ item.image }}" alt="{{ item.alt }}" />
@@ -57,6 +68,9 @@
         </div>
       </div>
     </div>
+    <ng-template #noFood>
+      <div class="empty-food">No Items matched your search</div>
+    </ng-template>
   </div>
   <a class="scroll-to-top" *ngIf="isShow" href="#menu">👆</a>
   <app-footer></app-footer>
