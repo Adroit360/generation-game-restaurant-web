@@ -14,7 +14,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class HomepageComponent implements OnInit {
   private socket: any;
   category = 'all foods';
-  filters = ['all foods', 'beans', 'rice', 'banku', 'fufu'];
+  filters = ['all foods'];
   isShow = false;
   searchTerm = '';
 
@@ -61,6 +61,12 @@ export class HomepageComponent implements OnInit {
         this.closingTimeError = false;
       }
     });
+
+    this.filters.push(
+      ...this.socketService
+        .onGetCategories()
+        .filter((item: any) => item.category !== 'extras')
+    );
 
     this.foodArray = this.socketService.getFoodByCategory(this.category);
   }

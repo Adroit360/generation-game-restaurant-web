@@ -11,6 +11,7 @@ export class SocketService {
   constructor() {}
   closingTime: string = '19:00:00';
   openingTime = '07:00:00';
+  categories: string[] = [];
   foodArray: Food[] = [
     {
       id: '33cc84aebc4b49b9bdc181782680c493',
@@ -975,5 +976,14 @@ export class SocketService {
     return this.getFoodByCategory(category).filter((it) => {
       return it.body.toLocaleLowerCase().includes(searchTerm);
     });
+  }
+
+  onGetCategories(): string[] {
+    this.getAllFoods().forEach((item) => {
+      if (!this.categories.includes(item.category)) {
+        this.categories.push(item.category);
+      }
+    });
+    return this.categories;
   }
 }
