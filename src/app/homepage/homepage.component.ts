@@ -15,6 +15,7 @@ export class HomepageComponent implements OnInit {
   private socket: any;
   category = 'all foods';
   filters = ['all foods', 'beans', 'rice', 'banku', 'fufu'];
+  isShow = false;
 
   constructor(
     private router: Router,
@@ -63,12 +64,20 @@ export class HomepageComponent implements OnInit {
     this.foodArray = this.socketService.getFoodByCategory(this.category);
   }
 
-  // @HostListener('window:scroll', ['$event']) // for window scroll events
-  // onScroll(event: any) {
-  //   console.log('scroll top: ', document.body.scrollTop);
-  //   console.log('document top: ', document.documentElement.scrollTop); //630px
-  //   //console.log(event);
-  // }
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll() {
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    if (scrollPosition >= 800) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
 
   onProceedToOrderPage(id: number): void {
     if (this.orderStatus || this.day === 0) {
