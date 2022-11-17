@@ -30,13 +30,23 @@
 
 <!--POPUP MODAL-->
 <div class="modal" *ngIf="addAnotherItemModal">
-  <div style="max-height: calc(100vh - 4rem)" class="popup center">
+  <div style="max-height: 100vh; height: 100%" class="popup center">
     <div class="header">
       <div class="header__title">
         <div class="left">Add Another Food</div>
         <div (click)="closeAddAnotherItemModal()" class="right pill">close</div>
       </div>
-
+      <div class="search-container">
+        <div class="foresight-search-bar fill-space m-bottom">
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            (input)="onSearchFood(searchTerm)"
+            placeholder="Search for food..."
+          />
+          <i class="material-symbols-outlined"> search </i>
+        </div>
+      </div>
       <div class="categories">
         <p
           *ngFor="let item of filters"
@@ -51,10 +61,11 @@
       style="
         overflow: auto;
         max-height: calc(100% - 8rem);
-        margin-top: 6.5rem;
+        margin-top: 13rem;
         padding-bottom: 1rem;
       "
       class="menu__container"
+      *ngIf="foodArray.length > 0; else noFood"
     >
       <div class="menu__meal__card" *ngFor="let item of foodArray">
         <div class="card__image">
@@ -67,6 +78,19 @@
         </div>
       </div>
     </div>
+    <ng-template #noFood>
+      <div
+        class="empty-food"
+        style="
+          overflow: auto;
+          max-height: calc(100% - 8rem);
+          margin-top: 13rem;
+          padding-bottom: 1rem;
+        "
+      >
+        No Items matched your search
+      </div>
+    </ng-template>
   </div>
 </div>
 <!--END POPUP MODAL-->

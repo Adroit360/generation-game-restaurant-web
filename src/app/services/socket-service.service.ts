@@ -195,10 +195,19 @@ export class SocketService {
     },
     {
       id: '91fcca31cba046fea468af2c659bcf101',
-      body: 'Extra Meat/Goat',
+      body: 'Extra Meat',
       image:
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/4ba78244b5af46af8cb509f0194d8830.jpeg',
-      alt: 'Extra Meat/Goat',
+      alt: 'Extra Meat',
+      price: '18.00',
+      category: 'extras',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf700',
+      body: 'Extra Goat',
+      image:
+        'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/4ba78244b5af46af8cb509f0194d8830.jpeg',
+      alt: 'Extra Goat',
       price: '18.00',
       category: 'extras',
     },

@@ -32,7 +32,7 @@ export class OrderPageComponent implements OnInit {
     quantity: number;
     price: number;
   }[] = [];
-  foodArray: any[] = [];
+  foodArray: any;
   loading = false;
   isValidLocationOrPacks = false;
   momoErrorMessage$: Observable<any>;
@@ -41,8 +41,9 @@ export class OrderPageComponent implements OnInit {
   payStackUrl: any;
   payStackModal = false;
   errorMessage = '';
-  category = 'beans';
-  filters = ['beans', 'extras', 'rice', 'banku', 'fufu'];
+  category = 'local dishes';
+  filters: string[] = [];
+  searchTerm = '';
 
   constructor(
     private router: Router,
@@ -131,6 +132,8 @@ export class OrderPageComponent implements OnInit {
       });
       this.totalPrice = this.getTotalPrice(this.deliveryFee, this.priceOfFood);
     });
+
+    this.filters.push(...this.socketService.onGetCategories());
 
     this.socket.on('notification', (res: any) => {
       this.data = res.data;
@@ -432,5 +435,12 @@ export class OrderPageComponent implements OnInit {
     this.foodArray = this.socketService
       .getAllFoods()
       .filter((i) => !foodOrderedIds.includes(i.id) && i.category === item);
+    this.searchTerm = '';
+  }
+  onSearchFood(searchTerm: any) {
+    this.foodArray = this.socketService.onSearchFood(
+      searchTerm.toLocaleLowerCase(),
+      this.category
+    );
   }
 }
