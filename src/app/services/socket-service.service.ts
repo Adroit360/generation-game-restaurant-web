@@ -19,23 +19,25 @@ export class SocketService {
       image: '../../assets/beans and egg.jpg',
       alt: 'Chicken Soup',
       price: '40.00',
-      category: 'soup',
+      category: 'local dishes',
     },
     {
       id: '3646754e10574da3a16a90e2ecff5e06',
       body: 'Goat Soup',
-      image: '../../assets/closePackage.jpg',
+      image:
+        'https://agameals.com/wp-content/uploads/2021/12/Goat-Meat-Peppersoup-Wazobia-African-Market-1.jpg',
       alt: 'Goat Soup',
       price: '40.00',
-      category: 'soup',
+      category: 'local dishes',
     },
     {
       id: '4226d4f1e91e404880345bc18be88e5b',
       body: 'Hot pepper soup with goat meat',
-      image: '../../assets/closePackage.jpg',
+      image:
+        'https://agameals.com/wp-content/uploads/2021/12/Goat-Meat-Peppersoup-Wazobia-African-Market-1.jpg',
       alt: 'Hot pepper soup with goat meat',
       price: '45.00',
-      category: 'soup',
+      category: 'local dishes',
     },
     {
       id: 'ab62ad68aff443afa4c827a78a22e3a3',
@@ -43,7 +45,7 @@ export class SocketService {
       image: '../../assets/BeansWithEggAndChicken.jpg',
       alt: 'Full Tilapia Soup',
       price: '55.00',
-      category: 'soup',
+      category: 'local dishes',
     },
     {
       id: '6fe15e03186f478b8c2399ae70a51960',
@@ -51,15 +53,16 @@ export class SocketService {
       image: '../../assets/RiceWithPlantainAndEgg.jpg',
       alt: 'Fish soup',
       price: '40.00',
-      category: 'soup',
+      category: 'local dishes',
     },
     {
       id: 'c4d3ddc886c540149323387915598847',
       body: 'Fufu with fish soup',
-      image: '../../assets/BeansWithEggAndChicken.jpg',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Fufu-red-fish%20Background%20Removed.png?alt=media&token=9a1427f8-92d4-47f2-8002-93c93bacf9f0',
       alt: 'Fufu with fish soup',
       price: '45.00',
-      category: 'fufu',
+      category: 'local dishes',
     },
     {
       id: 'ddbf19c31b9c4844865bf59fbb8fc985',
@@ -67,7 +70,7 @@ export class SocketService {
       image: '../../assets/closePackage.jpg',
       alt: 'Fufu with chicken soup',
       price: '45.00',
-      category: 'fufu',
+      category: 'local dishes',
     },
     {
       id: '4d2da93389ce48aa8841c56891494942',
@@ -75,7 +78,7 @@ export class SocketService {
       image: '../../assets/riceWithFishAndEgg.jpg',
       alt: 'Rice with chicken soup',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf86',
@@ -83,7 +86,7 @@ export class SocketService {
       image: '../../assets/closePackage.jpg',
       alt: 'Rice with fish soup',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf86',
@@ -91,7 +94,7 @@ export class SocketService {
       image: '../../assets/closePackage.jpg',
       alt: 'Rice with goat soup',
       price: '47.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf93',
@@ -100,7 +103,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/9d7add1feb2c4db1b0f73dc7fff65a6c.jpeg',
       alt: 'Fufu with goat soup',
       price: '47.00',
-      category: 'fufu',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf94',
@@ -109,7 +112,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/739162e260634fecb0778d90df445c66.jpeg',
       alt: 'Banku with okro and fish',
       price: '45.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf95',
@@ -118,7 +121,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/2160423773ec4c1a836543a6f3dab9b2.jpeg',
       alt: 'Banku with okro and chicken',
       price: '45.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf87',
@@ -127,7 +130,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/b18a3b04a8894f24aa8237b0c1ee425c.jpeg',
       alt: 'Eba with okro and chicken',
       price: '45.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf88',
@@ -136,7 +139,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/16e9f7331bbe4e4f96600300b2e5a165.jpeg',
       alt: 'Eba with okro and fish',
       price: '45.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf89',
@@ -145,7 +148,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/58701df60c924014addee65c8a71f055.jpeg',
       alt: 'Eba with okro and goat meat',
       price: '49.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf90',
@@ -154,7 +157,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/58701df60c924014addee65c8a71f055.jpeg',
       alt: 'Banku with okro and goat meat',
       price: '49.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf91',
@@ -163,7 +166,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/e5cda0f1e59b41caad09b73e0a25b19b.jpeg',
       alt: 'Banku with okro special',
       price: '55.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf92',
@@ -172,7 +175,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/c1770f9226fc4cc6a7e456155d6b5aad.jpeg',
       alt: 'Banku with hot pepper and chicken',
       price: '45.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf96',
@@ -180,7 +183,7 @@ export class SocketService {
       image: '../../assets/Banku-Fish-1.jpeg',
       alt: 'Banku with hot pepper and fish',
       price: '47.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf97',
@@ -188,7 +191,7 @@ export class SocketService {
       image: '../../assets/Banku-Fish-1.jpeg',
       alt: 'Banku with hot pepper and goat meat',
       price: '47.00',
-      category: 'banku',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf101',
@@ -233,7 +236,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/5d0d109937014f97a235e76d2f91f765.jpeg',
       alt: 'Jollof with chicken stew',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf100',
@@ -242,7 +245,7 @@ export class SocketService {
         'https://d1bycbsuiqd0qu.cloudfront.net/200x200/images/cca744abd84b442898562e5adf414cb9.jpeg',
       alt: 'Jollof with fish stew',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf200',
@@ -250,7 +253,7 @@ export class SocketService {
       image: '../../assets/fufu.jpeg',
       alt: 'Plain rice with fish stew',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf201',
@@ -258,7 +261,7 @@ export class SocketService {
       image: '../../assets/fufu.jpeg',
       alt: 'Plain rice with chicken stew',
       price: '45.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf202',
@@ -266,7 +269,7 @@ export class SocketService {
       image: '../../assets/fufu.jpeg',
       alt: 'Plain rice with goat stew',
       price: '51.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf202',
@@ -274,7 +277,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Jollof rice with goat stew',
       price: '51.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf203',
@@ -322,7 +325,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with grilled tilapia(full)',
       price: '51.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf207',
@@ -330,7 +333,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with fried tilapia(full)',
       price: '51.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf500',
@@ -338,7 +341,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with fried tilapia(half)',
       price: '43.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf501',
@@ -346,7 +349,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with grilled tilapia(half)',
       price: '43.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf502',
@@ -354,7 +357,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with tilapia Soup(half)',
       price: '47.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf503',
@@ -362,7 +365,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Banku with tilapia Soup(full)',
       price: '47.00',
-      category: 'tilapia',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf504',
@@ -594,15 +597,16 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Assorted Rice',
       price: '47.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf533',
       body: 'Assorted Jollof',
-      image: '../../assets/fufulebene.jpg',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Assorted-Jollof1.jpeg?alt=media&token=83702737-4a8a-42b2-b06c-20495589a32b',
       alt: 'Assorted Jollof',
       price: '50.00',
-      category: 'rice',
+      category: 'local dishes',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf534',
@@ -658,7 +662,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Diced chicken with vegetables',
       price: '50.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf541',
@@ -666,7 +670,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Shredded beef with onions and green pepper',
       price: '52.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf542',
@@ -674,7 +678,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Shredded beef with chinese vegetables',
       price: '57.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf543',
@@ -682,7 +686,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Diced fish with vegetables',
       price: '60.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf544',
@@ -690,7 +694,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Chicken sauce only',
       price: '45.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf545',
@@ -698,7 +702,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Beef sauce only',
       price: '45.00',
-      category: 'chinese',
+      category: 'sauces',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf546',
@@ -706,7 +710,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Beef sauce only',
       price: '6.00',
-      category: 'spring rolls',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf547',
@@ -714,7 +718,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'meat spring rolls (one piece)',
       price: '6.00',
-      category: 'spring rolls',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf548',
@@ -722,7 +726,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'spicy fried chicken wings (one piece)',
       price: '8.00',
-      category: 'chicken wings',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf549',
@@ -730,7 +734,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'spicy fried chicken wings (one piece)',
       price: '8.00',
-      category: 'chicken wings',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf550',
@@ -738,7 +742,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'spicy grilled chicken wings (one piece)',
       price: '8.00',
-      category: 'chicken wings',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf551',
@@ -746,7 +750,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'spicy grilled chicken wings (one piece)',
       price: '8.00',
-      category: 'chicken wings',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf552',
@@ -754,7 +758,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Beef burger',
       price: '30.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf553',
@@ -762,7 +766,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Chicken burger',
       price: '30.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf554',
@@ -770,15 +774,16 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Egg burger',
       price: '32.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf555',
       body: 'Cheese burger',
-      image: '../../assets/fufulebene.jpg',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Cheese-burger.jpeg?alt=media&token=3ae49488-9fcc-4a0c-800d-026c68e359f5',
       alt: 'Cheese burger',
       price: '35.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf556',
@@ -786,7 +791,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Egg & Cheese burger',
       price: '38.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf557',
@@ -794,7 +799,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Double beef burger',
       price: '44.00',
-      category: 'hamburgers',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf558',
@@ -802,7 +807,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Egg salad sandwich in rolls',
       price: '30.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf559',
@@ -810,7 +815,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Egg salad sandwich in bread',
       price: '30.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf560',
@@ -818,7 +823,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Tuna salad sandwich in bread',
       price: '30.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf561',
@@ -826,7 +831,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Tuna salad sandwich in rolls',
       price: '30.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf562',
@@ -834,7 +839,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'chicken salad sandwich in rolls',
       price: '32.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf563',
@@ -842,7 +847,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'chicken salad sandwich in bread',
       price: '32.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf564',
@@ -850,7 +855,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Meat sandwich',
       price: '34.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf565',
@@ -858,7 +863,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'chicken club sandwich',
       price: '34.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf566',
@@ -866,7 +871,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Grilled chinese sandwich',
       price: '35.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf567',
@@ -874,7 +879,7 @@ export class SocketService {
       image: '../../assets/fufulebene.jpg',
       alt: 'Chicken club sandwich and chips',
       price: '56.00',
-      category: 'snacks/sandwiches',
+      category: 'continental',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf568',

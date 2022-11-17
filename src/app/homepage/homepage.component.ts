@@ -65,7 +65,7 @@ export class HomepageComponent implements OnInit {
     this.filters.push(
       ...this.socketService
         .onGetCategories()
-        .filter((item: any) => item.category !== 'extras')
+        .filter((item: any) => item !== 'extras')
     );
 
     this.foodArray = this.socketService.getFoodByCategory(this.category);

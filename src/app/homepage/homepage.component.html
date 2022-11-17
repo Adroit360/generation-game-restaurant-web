@@ -47,14 +47,16 @@
     </div>
     <div>
       <h1 style="margin: 0" class="menu__heading">Our Menu</h1>
-      <div class="categories">
-        <p
-          *ngFor="let item of filters"
-          [ngClass]="item === category ? 'active' : ''"
-          (click)="onSelectFilter(item)"
-        >
-          {{ item }}
-        </p>
+      <div>
+        <div class="categories">
+          <p
+            *ngFor="let item of filters"
+            [ngClass]="item === category ? 'active' : ''"
+            (click)="onSelectFilter(item)"
+          >
+            {{ item }}
+          </p>
+        </div>
       </div>
     </div>
     <div class="menu__container" *ngIf="foodArray.length > 0; else noFood">
