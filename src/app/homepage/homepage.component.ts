@@ -13,7 +13,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class HomepageComponent implements OnInit {
   private socket: any;
-  category = 'all foods';
+  // category = 'all foods';
+  category = 'fast food';
   filters = ['all foods'];
   isShow = false;
   searchTerm = '';
