@@ -1336,7 +1336,7 @@ export class SocketService {
       image: '',
       alt: 'Extra Cowfeet, Tuna , Crab , Wele',
       price: '15.00',
-      category: 'Extras',
+      category: 'extras',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf636',
@@ -1345,7 +1345,7 @@ export class SocketService {
         'https://thumbs.dreamstime.com/b/background-small-fish-caught-river-crucian-carp-57148744.jpg',
       alt: 'Extra River Fish',
       price: '19.00',
-      category: 'Extras',
+      category: 'extras',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf637',
@@ -1354,7 +1354,7 @@ export class SocketService {
         'https://www.skinnytaste.com/wp-content/uploads/2018/12/Baked-Salmon-1.jpg',
       alt: 'Extra Salmon',
       price: '20.00',
-      category: 'Extras',
+      category: 'extras',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf637',
@@ -1363,7 +1363,7 @@ export class SocketService {
         'https://www.seriouseats.com/thmb/N_vZayV1UT8Bbx1u0VB0L9t3PJ0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__08__20160827-sous-vide-tuna-41-77b48f9e66044d98921fd1230b581a25.jpg',
       alt: 'Extra Tuna',
       price: '20.00',
-      category: 'Extras',
+      category: 'extras',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf638',
@@ -1372,7 +1372,7 @@ export class SocketService {
         'https://ocdn.eu/images/pulscms/N2M7MDA_/7df21359e6656c722116a196b81acc55.jpeg',
       alt: 'Fufu with Dry Fish',
       price: '50.00',
-      category: 'Extras',
+      category: 'extras',
     },
   ];
 

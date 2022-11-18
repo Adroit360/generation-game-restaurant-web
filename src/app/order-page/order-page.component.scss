@@ -518,6 +518,9 @@
   &:hover {
     background-color: #1f70d3;
   }
+  .categories {
+    justify-content: flex-start !important;
+  }
 }
 
 .food-name-container {
