@@ -19,8 +19,9 @@
     </div>
     <div class="body">
       <div class="body__intro" id="home">
-        <p class="text_base">Welcome to generation game restaurant</p>
-        <p class="text-intro">Home Hut with a home touch</p>
+        <p class="text_base">Welcome to Home Hut</p>
+        <!-- <p class="text-intro">Home Hut with a home touch</p> -->
+        <p class="text">Formerly Generation game restaurant</p>
         <p class="text">
           Great food, exceptional service. Our quality beats the market
         </p>
@@ -33,19 +34,32 @@
     </div>
   </div>
   <div class="body__menu" id="menu">
-    <div>
-      <h1 style="margin: 0" class="menu__heading">Our Menu</h1>
-      <div class="categories">
-        <p
-          *ngFor="let item of filters"
-          [ngClass]="item === category ? 'active' : ''"
-          (click)="onSelectFilter(item)"
-        >
-          {{ item }}
-        </p>
+    <div class="search-container">
+      <div class="foresight-search-bar fill-space m-bottom">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (input)="onSearchFood(searchTerm)"
+          placeholder="Search for food..."
+        />
+        <i class="material-symbols-outlined"> search </i>
       </div>
     </div>
-    <div class="menu__container">
+    <div>
+      <h1 style="margin: 0" class="menu__heading">Our Menu</h1>
+      <div>
+        <div class="categories">
+          <p
+            *ngFor="let item of filters"
+            [ngClass]="item === category ? 'active' : ''"
+            (click)="onSelectFilter(item)"
+          >
+            {{ item }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="menu__container" *ngIf="foodArray.length > 0; else noFood">
       <div class="menu__meal__card" *ngFor="let item of foodArray">
         <div class="card__image">
           <img src="{{ item.image }}" alt="{{ item.alt }}" />
@@ -57,6 +71,9 @@
         </div>
       </div>
     </div>
+    <ng-template #noFood>
+      <div class="empty-food">No Items matched your search</div>
+    </ng-template>
   </div>
   <a class="scroll-to-top" *ngIf="isShow" href="#menu">👆</a>
   <app-footer></app-footer>

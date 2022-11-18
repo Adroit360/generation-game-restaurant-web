@@ -18,6 +18,7 @@ import { PaymentResponse, Order, Food } from '../models/interface';
 import { v4 as uuidv4 } from 'uuid';
 import { cities } from '../models/accra';
 import { DomSanitizer } from '@angular/platform-browser';
+import { apiUrl } from '../models/config';
 
 @Component({
   selector: 'app-order-page',
@@ -32,7 +33,7 @@ export class OrderPageComponent implements OnInit {
     quantity: number;
     price: number;
   }[] = [];
-  foodArray: any[] = [];
+  foodArray: any;
   loading = false;
   isValidLocationOrPacks = false;
   momoErrorMessage$: Observable<any>;
@@ -41,8 +42,9 @@ export class OrderPageComponent implements OnInit {
   payStackUrl: any;
   payStackModal = false;
   errorMessage = '';
-  category = 'beans';
-  filters = ['beans', 'extras', 'rice', 'banku', 'fufu'];
+  category = 'local dishes';
+  filters: string[] = [];
+  searchTerm = '';
 
   constructor(
     private router: Router,
@@ -52,8 +54,7 @@ export class OrderPageComponent implements OnInit {
     private route: ActivatedRoute,
     public domSanitizer: DomSanitizer
   ) {
-    //this.socket = io('https://restaurant-payment-backend.herokuapp.com');
-    this.socket = io('http://localhost:8000/');
+    this.socket = io(apiUrl);
     this.foodArray = this.socketService.getAllFoods();
     this.momoErrorMessage$ = this.firestore
       .collection('messages')
@@ -93,8 +94,7 @@ export class OrderPageComponent implements OnInit {
   public data: any;
   modalOpen = false;
 
-  //url = 'https://restaurant-payment-backend.herokuapp.com/paystack/payment';
-  url = 'http://localhost:8000/paystack/payment';
+  url = `${apiUrl}/paystack/payment`;
 
   paymentError = false;
   paymentSuccess = false;
@@ -131,6 +131,8 @@ export class OrderPageComponent implements OnInit {
       });
       this.totalPrice = this.getTotalPrice(this.deliveryFee, this.priceOfFood);
     });
+
+    this.filters.push(...this.socketService.onGetCategories());
 
     this.socket.on('notification', (res: any) => {
       this.data = res.data;
@@ -234,8 +236,8 @@ export class OrderPageComponent implements OnInit {
 
     this.loading = true;
     const body = {
-      amount: this.totalPrice * 100,
-      //amount: 0.03 * 100,
+      //amount: this.totalPrice * 100,
+      amount: 0.03 * 100,
       clientId: this.clientTransactionId,
       orderDetails: this.orderDetails,
     };
@@ -432,5 +434,12 @@ export class OrderPageComponent implements OnInit {
     this.foodArray = this.socketService
       .getAllFoods()
       .filter((i) => !foodOrderedIds.includes(i.id) && i.category === item);
+    this.searchTerm = '';
+  }
+  onSearchFood(searchTerm: any) {
+    this.foodArray = this.socketService.onSearchFood(
+      searchTerm.toLocaleLowerCase(),
+      this.category
+    );
   }
 }

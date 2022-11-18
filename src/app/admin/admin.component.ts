@@ -1,3 +1,4 @@
+import { apiUrl } from './../models/config';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { io } from 'socket.io-client';
@@ -64,7 +65,7 @@ export class AdminComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private firestore: AngularFirestore
   ) {
-    this.socket = io('https://restaurant-payment-backend.herokuapp.com/');
+    this.socket = io(apiUrl);
     this.showFailed = activatedRoute.snapshot.queryParams['showFailed'];
 
     this.orders$ = this.onGetTotalOrdersCollection(
@@ -94,14 +95,12 @@ export class AdminComponent implements OnInit {
       this.showOrderDetails = authUser.isAdmin;
     }
 
-    this.http
-      .get('https://restaurant-payment-backend.herokuapp.com/')
-      .subscribe((res: any) => {
-        this.orderStatus = res.orderStatus;
-        if (this.orderStatus || this.day === 0) {
-          this.closeOrder = true;
-        }
-      });
+    this.http.get(apiUrl).subscribe((res: any) => {
+      this.orderStatus = res.orderStatus;
+      if (this.orderStatus || this.day === 0) {
+        this.closeOrder = true;
+      }
+    });
 
     this.socket.on('orderStatus', (res: { orderStatus: boolean }) => {
       this.orderStatus = res.orderStatus;
@@ -145,13 +144,7 @@ export class AdminComponent implements OnInit {
         'Content-Type': 'application/json',
       }),
     };
-    this.http
-      .post(
-        'https://restaurant-payment-backend.herokuapp.com/api/openOrders',
-        {},
-        httpOptions
-      )
-      .subscribe();
+    this.http.post(`${apiUrl}/api/openOrders`, {}, httpOptions).subscribe();
     this.onToggleSidebar();
   }
 
@@ -161,13 +154,7 @@ export class AdminComponent implements OnInit {
         'Content-Type': 'application/json',
       }),
     };
-    this.http
-      .post(
-        'https://restaurant-payment-backend.herokuapp.com/api/closeOrders',
-        {},
-        httpOptions
-      )
-      .subscribe();
+    this.http.post(`${apiUrl}/api/closeOrders`, {}, httpOptions).subscribe();
     this.onToggleSidebar();
   }
 
