@@ -1025,6 +1025,355 @@ export class SocketService {
       price: '25.00',
       category: 'extras',
     },
+    {
+      id: '91fcca31cba046fea468af2c659bcf600',
+      body: 'Fufu with Full tilapia and Palm soup',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Fufu-with-full-tilapia.jpeg?alt=media&token=dc3a6065-2ed2-4422-bead-c02c4b2ecc3f',
+      alt: 'Fufu with Full tilapia and Palm soup',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf601',
+      body: 'Fufu with Full tilapia and Groundnut soup',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Fufu-with-full-tilapia.jpeg?alt=media&token=dc3a6065-2ed2-4422-bead-c02c4b2ecc3f',
+      alt: 'Fufu with Full tilapia and Groundnut soup',
+      price: '50.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf602',
+      body: 'Fufu with Half tilapia and Palm soup',
+      image: 'https://i.ytimg.com/vi/f3EcAspamVQ/maxresdefault.jpg',
+      alt: 'Fufu with Half tilapia and Palm soup',
+      price: '49.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf603',
+      body: 'Fufu with Half tilapia and Groundnut soup',
+      image: 'https://i.ytimg.com/vi/f3EcAspamVQ/maxresdefault.jpg',
+      alt: 'Fufu with Half tilapia and Groundnut soup',
+      price: '49.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf604',
+      body: 'Fufu with dry fish with Goat',
+      image:
+        'https://besthomediet.com/wp-content/uploads/2021/08/fufu-and-light-soup-pic-01.jpg',
+      alt: 'Fufu with dry fish with Goat',
+      price: '60.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf605',
+      body: 'Fufu with dry fish with beef',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/fufu-dry-fish.jpeg?alt=media&token=6086fa62-1854-4dcd-ad99-f6499ffb8030',
+      alt: 'Fufu with dry fish with beef',
+      price: '60.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf606',
+      body: 'Fufu with salmon with Goat',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Fufu-special.jpeg?alt=media&token=db81267f-4867-4219-a6f6-e07d1fe23f76',
+      alt: 'Fufu with salmon with Goat',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf607',
+      body: 'Fufu with salmon and beef',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/fufu-with-salmon2.png?alt=media&token=3b868ba5-f36e-469b-9d24-85bf71b4d881',
+      alt: 'Fufu with salmon with beef',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf608',
+      body: 'Fufu with tuna and Goat',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/fufu-with-tuna-and-goat%20Background%20Removed.png?alt=media&token=44d49289-05af-4d47-b64c-3ba31d105f8b',
+      alt: 'Fufu with tuna and Goat',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf609',
+      body: 'Fufu with tuna and Beef',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/fufu-with-tuna-beef.jpeg?alt=media&token=08aadbcf-5ac1-4514-b3d6-7dea43aa6601',
+      alt: 'Fufu with tuna and Beef',
+      price: '59.00',
+      category: 'special order',
+    },
+
+    {
+      id: '91fcca31cba046fea468af2c659bcf612',
+      body: 'Apem/Yam with Egg stew with Full Tilapia',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/apenm%3Ayam-egg-stew-tilapia.jpeg?alt=media&token=f8027c88-0388-499c-a1cf-18c9cb338de2',
+      alt: 'Apem/Yam with Egg stew with Full Tilapia',
+      price: '70.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf613',
+      body: 'Apem/Yam with Palava with Half Tilapia',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Yam-with-palava-sauce.jpeg?alt=media&token=dbf2a00e-8f69-4251-816f-81bb9fe2086c',
+      alt: 'Apem/Yam with Palava with Half Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+
+    {
+      id: '91fcca31cba046fea468af2c659bcf611',
+      body: 'Apem/Yam with Palava sauce with Full Tilapia',
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD8HuENoW6b-g9hjXB5u2eNA2fumzUCp9o6xtAUTTWZSoDY1H_yVTJu_ElO8mU9wa1FsE&usqp=CAU',
+      alt: 'Apem/Yam with Palava sauce with Full Tilapia',
+      price: '70.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf615',
+      body: 'Apem/Yam with Palava and Koobi',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Yam-with-palava-sauce.jpeg?alt=media&token=dbf2a00e-8f69-4251-816f-81bb9fe2086c',
+      alt: 'Apem/Yam with Palava and Koobi',
+      price: '62.00',
+      category: 'special order',
+    },
+
+    {
+      id: '91fcca31cba046fea468af2c659bcf616',
+      body: 'Apem/Yam with Egg Stew and Koobi',
+      image:
+        'https://ocdn.eu/images/pulscms/ODI7MDA_/c0ee147c47ed3b1f41e3287ae7314296.jpg',
+      alt: 'Apem/Yam with Egg Stew and Koobi',
+      price: '62.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf617',
+      body: 'Ripe Plantain with Full Tilapia',
+      image:
+        'https://www.thedreamafrica.com/wp-content/uploads/2018/01/best-grilled-fish-and-dodo.jpg',
+      alt: 'Ripe Plantain with Full Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf614',
+      body: 'Apem/Yam with Egg stew Half Tilapia',
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Yam-with-palava-sauce.jpeg?alt=media&token=dbf2a00e-8f69-4251-816f-81bb9fe2086c',
+      alt: 'Apem/Yam with Egg stew Half Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf618',
+      body: 'Ripe Plantain with Half Tilapia',
+      image:
+        'https://www.thedreamafrica.com/wp-content/uploads/2018/01/best-grilled-fish-and-dodo.jpg',
+      alt: 'Ripe Plantain with Half Tilapia',
+      price: '49.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf619',
+      body: 'Omotuo with Cow Feet and Goat',
+      image:
+        'https://myrecipejoint.com/wp-content/uploads/2021/06/723c61ae6341c8343b375a73253f7f441.jpeg',
+      alt: 'Omotuo with Cow Feet and Goat',
+      price: '51.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf620',
+      body: 'Omotuo with Cow Feet and Beef',
+      image:
+        'https://myrecipejoint.com/wp-content/uploads/2021/06/723c61ae6341c8343b375a73253f7f441.jpeg',
+      alt: 'Omotuo with Cow Feet and Beef',
+      price: '51.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf621',
+      body: 'Vegetable Jollof with Full Tilapia',
+      image: 'https://i.ytimg.com/vi/cOGZOgDnk-o/maxresdefault.jpg',
+      alt: 'Vegetable Jollof with Full Tilapia',
+      price: '62.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf622',
+      body: 'Vegetable Rice with Full Tilapia',
+      image:
+        'https://i1.wp.com/www.spicyfafa.com/wp-content/uploads/2013/05/fried-rice-with-egg-and-vegetables-and-fried-tilapia.jpg?fit=1024%2C768&ssl=1',
+      alt: 'Vegetable Rice with Full Tilapia',
+      price: '62.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf623',
+      body: 'Vegetable Jollof with Half Tilapia',
+      image:
+        'https://i.pinimg.com/originals/07/8d/77/078d77a3e8221ac2242842d71843a51d.jpg',
+      alt: 'Vegetable Jollof with Half Tilapia',
+      price: '52.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf624',
+      body: 'Vegetable Rice with Half Tilapia',
+      image:
+        'https://i1.wp.com/www.spicyfafa.com/wp-content/uploads/2013/05/fried-rice-with-egg-and-vegetables-and-fried-tilapia.jpg?fit=1024%2C768&ssl=1',
+      alt: 'Vegetable Rice with Half Tilapia',
+      price: '52.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf625',
+      body: 'Vegetable Jollof with Goat',
+      image:
+        'https://i0.wp.com/biscuitsandladles.com/wp-content/uploads/2018/02/jollof-with-goat-meat.jpg?ssl=1',
+      alt: 'Vegetable Jollof with Goat',
+      price: '55.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf626',
+      body: 'Vegetable Jollof with Beef',
+      image:
+        'https://www.allnigerianrecipes.com/wp-content/uploads/2019/03/leafy-jollof-rice.jpg',
+      alt: 'Vegetable Jollof with Beef',
+      price: '55.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf627',
+      body: 'Vegetable Rice with Goat',
+      image:
+        'https://i0.wp.com/dobbyssignature.com/wp-content/uploads/2020/03/Goat-meat-coconut-rice.jpg?resize=720%2C720&ssl=1',
+      alt: 'Vegetable Rice with Goat',
+      price: '55.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf628',
+      body: 'Vegetable Rice with Beef',
+      image:
+        'https://img-global.cpcdn.com/recipes/ebd61008fa2d4a14/680x482cq70/vegetable-rice-and-beef-stew-recipe-main-photo.jpg',
+      alt: 'Vegetable Rice with Beef',
+      price: '55.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf629',
+      body: 'Fried Rice with Full Tilapia',
+      image:
+        'https://i1.wp.com/www.spicyfafa.com/wp-content/uploads/2013/05/fried-rice-with-egg-and-vegetables-and-fried-tilapia.jpg?fit=1024%2C768&ssl=1',
+      alt: 'Fried Rice with Full Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf630',
+      body: 'Plain Rice with Full Tilapia',
+      image:
+        'https://biscuitsandladles.com/wp-content/uploads/2018/08/baked-tilapia-with-attieke-and-tomato-and-onion-salad-500x500.jpg',
+      alt: 'Plain Rice with Full Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf631',
+      body: 'Jollof with Full Tilapia',
+      image:
+        'https://media-cdn.tripadvisor.com/media/photo-s/04/3b/59/89/run-off-restaurant-and.jpg',
+      alt: 'Jollof with Full Tilapia',
+      price: '59.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf632',
+      body: 'Fried Rice with Half Tilapia',
+      image: 'https://live.staticflickr.com/2176/2155452350_ac649fbf28_b.jpg',
+      alt: 'Fried Rice with Half Tilapia',
+      price: '48.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf633',
+      body: 'Plain Rice with Half Tilapia',
+      image:
+        'https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Tilapia-with-Jasmine-Rice_EXPS_SDDJ17_39834_B08_03_1b.jpg',
+      alt: 'Plain Rice with Half Tilapia',
+      price: '48.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf634',
+      body: 'Jollof with Half Tilapia',
+      image:
+        'https://i.pinimg.com/originals/07/8d/77/078d77a3e8221ac2242842d71843a51d.jpg',
+      alt: 'Jollof with Half Tilapia',
+      price: '48.00',
+      category: 'special order',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf635',
+      body: 'Extra Cowfeet, Tuna , Crab , Wele',
+      image: '',
+      alt: 'Extra Cowfeet, Tuna , Crab , Wele',
+      price: '15.00',
+      category: 'Extras',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf636',
+      body: 'Extra River Fish',
+      image:
+        'https://thumbs.dreamstime.com/b/background-small-fish-caught-river-crucian-carp-57148744.jpg',
+      alt: 'Extra River Fish',
+      price: '19.00',
+      category: 'Extras',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf637',
+      body: 'Extra Salmon',
+      image:
+        'https://www.skinnytaste.com/wp-content/uploads/2018/12/Baked-Salmon-1.jpg',
+      alt: 'Extra Salmon',
+      price: '20.00',
+      category: 'Extras',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf637',
+      body: 'Extra Tuna',
+      image:
+        'https://www.seriouseats.com/thmb/N_vZayV1UT8Bbx1u0VB0L9t3PJ0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__08__20160827-sous-vide-tuna-41-77b48f9e66044d98921fd1230b581a25.jpg',
+      alt: 'Extra Tuna',
+      price: '20.00',
+      category: 'Extras',
+    },
+    {
+      id: '91fcca31cba046fea468af2c659bcf638',
+      body: 'Fufu with Dry Fish',
+      image:
+        'https://ocdn.eu/images/pulscms/N2M7MDA_/7df21359e6656c722116a196b81acc55.jpeg',
+      alt: 'Fufu with Dry Fish',
+      price: '50.00',
+      category: 'Extras',
+    },
   ];
 
   getFoodByID(id: string): Food {
