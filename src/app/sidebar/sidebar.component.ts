@@ -1,3 +1,4 @@
+import { apiUrl } from './../models/config';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './../services/authentication.service';
@@ -22,20 +23,18 @@ export class SidebarComponent implements OnInit {
     private http: HttpClient,
     private activatedRoute: ActivatedRoute
   ) {
-    this.socket = io('https://restaurant-payment-backend.herokuapp.com/');
+    this.socket = io(apiUrl);
     this.showFailed = activatedRoute.snapshot.queryParams['showFailed'];
     // console.log('showFailed', this.showFailed);
   }
 
   ngOnInit(): void {
-    this.http
-      .get('https://restaurant-payment-backend.herokuapp.com/')
-      .subscribe((res: any) => {
-        this.orderStatus = res.orderStatus;
-        if (this.orderStatus) {
-          this.closeOrder = true;
-        }
-      });
+    this.http.get(apiUrl).subscribe((res: any) => {
+      this.orderStatus = res.orderStatus;
+      if (this.orderStatus) {
+        this.closeOrder = true;
+      }
+    });
 
     this.socket.on('orderStatus', (res: { orderStatus: boolean }) => {
       this.orderStatus = res.orderStatus;
@@ -62,13 +61,7 @@ export class SidebarComponent implements OnInit {
         'Content-Type': 'application/json',
       }),
     };
-    this.http
-      .post(
-        'https://restaurant-payment-backend.herokuapp.com/api/openOrders',
-        {},
-        httpOptions
-      )
-      .subscribe();
+    this.http.post(`${apiUrl}/api/openOrders`, {}, httpOptions).subscribe();
     this.onToggleSidebar();
   }
 
@@ -78,13 +71,7 @@ export class SidebarComponent implements OnInit {
         'Content-Type': 'application/json',
       }),
     };
-    this.http
-      .post(
-        'https://restaurant-payment-backend.herokuapp.com/api/closeOrders',
-        {},
-        httpOptions
-      )
-      .subscribe();
+    this.http.post(`${apiUrl}/api/closeOrders`, {}, httpOptions).subscribe();
     this.onToggleSidebar();
   }
 

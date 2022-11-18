@@ -1,3 +1,4 @@
+import { apiUrl } from './../models/config';
 import { SocketService } from './../services/socket-service.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class HomepageComponent implements OnInit {
   private socket: any;
   // category = 'all foods';
-  category = 'fast food';
+  category = 'all foods';
   filters = ['all foods'];
   isShow = false;
   searchTerm = '';
@@ -25,7 +26,7 @@ export class HomepageComponent implements OnInit {
     private http: HttpClient,
     private firestore: AngularFirestore
   ) {
-    this.socket = io('https://restaurant-payment-backend.herokuapp.com/');
+    this.socket = io(apiUrl);
   }
 
   foodArray: any;
@@ -43,16 +44,14 @@ export class HomepageComponent implements OnInit {
   day = new Date().getDay();
 
   ngOnInit(): void {
-    this.http
-      .get('https://restaurant-payment-backend.herokuapp.com/')
-      .subscribe((res: any) => {
-        this.orderStatus = res.orderStatus;
-        if (this.orderStatus || this.day === 0) {
-          this.closingTimeError = true;
-        } else {
-          this.closingTimeError = false;
-        }
-      });
+    this.http.get(apiUrl).subscribe((res: any) => {
+      this.orderStatus = res.orderStatus;
+      if (this.orderStatus || this.day === 0) {
+        this.closingTimeError = true;
+      } else {
+        this.closingTimeError = false;
+      }
+    });
 
     this.socket.on('orderStatus', (res: { orderStatus: boolean }) => {
       this.orderStatus = res.orderStatus;

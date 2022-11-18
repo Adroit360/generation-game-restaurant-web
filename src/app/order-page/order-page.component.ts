@@ -18,6 +18,7 @@ import { PaymentResponse, Order, Food } from '../models/interface';
 import { v4 as uuidv4 } from 'uuid';
 import { cities } from '../models/accra';
 import { DomSanitizer } from '@angular/platform-browser';
+import { apiUrl } from '../models/config';
 
 @Component({
   selector: 'app-order-page',
@@ -53,8 +54,7 @@ export class OrderPageComponent implements OnInit {
     private route: ActivatedRoute,
     public domSanitizer: DomSanitizer
   ) {
-    //this.socket = io('https://restaurant-payment-backend.herokuapp.com');
-    this.socket = io('http://localhost:8000/');
+    this.socket = io(apiUrl);
     this.foodArray = this.socketService.getAllFoods();
     this.momoErrorMessage$ = this.firestore
       .collection('messages')
@@ -94,8 +94,7 @@ export class OrderPageComponent implements OnInit {
   public data: any;
   modalOpen = false;
 
-  //url = 'https://restaurant-payment-backend.herokuapp.com/paystack/payment';
-  url = 'http://localhost:8000/paystack/payment';
+  url = `${apiUrl}/paystack/payment`;
 
   paymentError = false;
   paymentSuccess = false;
@@ -237,8 +236,8 @@ export class OrderPageComponent implements OnInit {
 
     this.loading = true;
     const body = {
-      amount: this.totalPrice * 100,
-      //amount: 0.03 * 100,
+      //amount: this.totalPrice * 100,
+      amount: 0.03 * 100,
       clientId: this.clientTransactionId,
       orderDetails: this.orderDetails,
     };
