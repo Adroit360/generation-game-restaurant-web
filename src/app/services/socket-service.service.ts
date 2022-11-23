@@ -1040,7 +1040,7 @@ export class SocketService {
       image:
         'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/Fufu-with-full-tilapia.jpeg?alt=media&token=dc3a6065-2ed2-4422-bead-c02c4b2ecc3f',
       alt: 'Fufu with Full tilapia and Groundnut soup',
-      price: '50.00',
+      price: '59.00',
       category: 'special order',
     },
     {
