@@ -596,10 +596,10 @@ export class SocketService {
     },
     {
       id: '91fcca31cba046fea468af2c659bcf527',
-      body: 'Generation Game special salad',
+      body: 'Home Hut Special Salad',
       image:
         'https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbGFkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-      alt: 'Generation Game special salad',
+      alt: 'Home Hut Special Salad',
       price: '47.00',
       category: 'salad',
     },
@@ -928,10 +928,10 @@ export class SocketService {
     },
     {
       id: '91fcca31cba046fea468af2c659bcf566',
-      body: 'Grilled chinese sandwich',
+      body: 'Grilled cheese sandwich',
       image:
         'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/grilled-chinese%20sandwich%20Background%20Removed.png?alt=media&token=fdc8ce70-8059-4fca-bd5d-5cc9fb40fa83',
-      alt: 'Grilled chinese sandwich',
+      alt: 'Grilled cheese sandwich',
       price: '35.00',
       category: 'continental',
     },
