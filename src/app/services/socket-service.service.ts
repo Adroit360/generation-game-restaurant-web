@@ -393,7 +393,7 @@ export class SocketService {
       image:
         'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/banku-with-tilapia%20Background%20Removed.png?alt=media&token=ddb6fecd-432e-4f65-9f0b-7d76efe6781a',
       alt: 'Banku with tilapia Soup(full)',
-      price: '47.00',
+      price: '57.00',
       category: 'local dishes',
     },
     {
@@ -417,19 +417,20 @@ export class SocketService {
     },
     {
       id: '91fcca31cba046fea468af2c659bcf507',
-      body: 'Jollof rice with grilled chicken and whole fish',
+      body: 'Jollof rice with  whole fish',
       image:
         'https://scontent.facc5-1.fna.fbcdn.net/v/t1.6435-9/96080951_1245279885667045_5115972284862955520_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9267fe&_nc_ohc=-dlBy3RyiNgAX-YfaiR&_nc_ht=scontent.facc5-1.fna&oh=00_AfCiG1hcposFZoBNyhmp0cspLD3lyT8J-KYnq6wO5dHVBA&oe=639DD1DF',
-      alt: 'Jollof rice with grilled chicken and whole fish',
+      alt: 'Jollof rice with  whole fish',
       price: '47.00',
       category: 'fast food',
     },
+
     {
-      id: '91fcca31cba046fea468af2c659bcf508',
-      body: 'Fried rice with grilled chicken and whole fish',
+      id: '91fcca31cba046fea468af2c659baw508',
+      body: 'Fried rice with whole fish',
       image:
         'https://firebasestorage.googleapis.com/v0/b/generation-game-restaurant.appspot.com/o/fried%20rice%20with%20chicken%20and%20fish.jpeg?alt=media&token=32136a77-b17f-4a40-83fc-ebc2583fae59',
-      alt: 'Fried rice with grilled chicken and whole fish',
+      alt: 'Fried rice with whole fish',
       price: '47.00',
       category: 'fast food',
     },
