@@ -646,7 +646,7 @@ export class SocketService {
       image: 'https://i.ytimg.com/vi/H3WPMf4iqrs/maxresdefault.jpg',
       alt: 'Assorted Rice',
       price: '47.00',
-      category: 'local dishes',
+      category: 'fast food',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf533',
@@ -655,7 +655,7 @@ export class SocketService {
         'https://www.bellanaija.com/wp-content/uploads/2021/02/thumbnail_1280X720-4.jpg',
       alt: 'Assorted Jollof',
       price: '50.00',
-      category: 'local dishes',
+      category: 'fast food',
     },
     {
       id: '91fcca31cba046fea468af2c659bcf534',
