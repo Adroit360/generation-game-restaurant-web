@@ -45,6 +45,7 @@ export class OrderPageComponent implements OnInit {
   category = 'local dishes';
   filters: string[] = [];
   searchTerm = '';
+  showLocation = true;
 
   constructor(
     private router: Router,
@@ -82,6 +83,7 @@ export class OrderPageComponent implements OnInit {
     location: new FormControl('', Validators.required),
     // deliveryFee: new FormControl(''),
     // amount: new FormControl(0, Validators.required),
+    deliveryType: new FormControl('dispatch-rider', Validators.required),
     numberOfPacks: new FormControl('', Validators.required),
     note: new FormControl(''),
     foodOrdered: new FormControl('', Validators.required),
@@ -110,6 +112,7 @@ export class OrderPageComponent implements OnInit {
   deliveryFee = 0;
   totalPrice = 0;
   clientTransactionId = '';
+  deliveryType = 'dispatch-rider';
 
   ngOnInit(): void {
     window.scroll(0, 0);
@@ -190,13 +193,16 @@ export class OrderPageComponent implements OnInit {
       return;
     }
 
-    if (this.invalidLocation || this.f['location'].errors) {
+    if (
+      (this.invalidLocation || this.f['location'].errors) &&
+      this.showLocation
+    ) {
       this.isValidLocationOrPacks = true;
       this.errorMessage = 'Please select a valid location';
       return;
     }
 
-    if (this.orderForm.invalid) {
+    if ((this.orderForm.invalid || this.invalidLocation) && this.showLocation) {
       window.scroll(0, 0);
       return;
     }
@@ -211,8 +217,13 @@ export class OrderPageComponent implements OnInit {
       amount: this.totalPrice,
       note: this.orderForm.value.note,
       completed: false,
-      location: this.orderForm.value.location,
-      deliveryFee: this.deliveryFee,
+      location:
+        this.orderForm.value.deliveryType === 'pick-up'
+          ? 'Pick Up'
+          : this.orderForm.value.location,
+      deliveryType: this.orderForm.value.deliveryType,
+      deliveryFee:
+        this.orderForm.value.deliveryType === 'pick-up' ? 0 : this.deliveryFee,
       priceOfFood: this.priceOfFood,
       orderPaid: false,
       numberOfPacks: this.foodsOrdered.map((food) => ({
@@ -327,19 +338,10 @@ export class OrderPageComponent implements OnInit {
       foodsPrice += Number(food.price * +food.quantity);
     });
     this.priceOfFood = foodsPrice.toFixed(2);
-    if (this.deliveryFee)
-      this.totalPrice = this.getTotalPrice(this.deliveryFee, this.priceOfFood);
 
-    // console.log('foodsOrdered', this.foodsOrdered, foodsPrice);
-    return;
-
-    let quantity = event.target.value;
-    this.priceOfFood = (parseFloat(this.price) * parseInt(quantity)).toFixed(2);
     this.totalPrice = this.getTotalPrice(this.deliveryFee, this.priceOfFood);
 
-    // this.orderForm.patchValue({
-    //   amount: (parseFloat(this.price) * parseInt(quantity)).toFixed(2),
-    // });
+    return;
   }
 
   onCalculateFee(event: any): void {
@@ -441,5 +443,17 @@ export class OrderPageComponent implements OnInit {
       searchTerm.toLocaleLowerCase(),
       this.category
     );
+  }
+  onDeliveryTypeChange(event: any) {
+    if (event.target.value === 'pick-up') {
+      this.showLocation = false;
+      this.deliveryFee = 0;
+      this.calculateAmount(event);
+    } else {
+      this.showLocation = true;
+      if (this.orderForm.value.location) {
+        this.onCalculateFee(this.orderForm.value.location);
+      }
+    }
   }
 }
