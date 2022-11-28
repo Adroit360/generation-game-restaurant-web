@@ -220,6 +220,7 @@
         word-wrap: break-word;
         font-size: 1rem;
         text-transform: capitalize;
+        margin: 0.5rem 0;
       }
       @media screen and (max-width: 600px) {
         flex-direction: column;
@@ -238,6 +239,7 @@
           padding: 1rem 2rem;
           font-family: "Poppins", sans-serif;
           font-weight: bold;
+          margin-top: 2rem;
           transition: background-color 200ms ease-in;
           &:hover {
             background-color: #2a590c;
@@ -300,6 +302,7 @@
     .card__body {
       padding: 0 2rem;
       text-align: left;
+      margin-top: 1rem;
     }
     .card__price {
       padding: 0 2rem;
